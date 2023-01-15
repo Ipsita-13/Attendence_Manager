@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <TextView
+        android:id="@+id/registerbanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Registeration"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <EditText
+        android:id="@+id/namereg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_txt_background"
+        android:hint="Name"
+        android:padding="10dp"
+        android:textSize="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:drawableLeft="@mipmap/name2"
+        android:drawablePadding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerbanner"
+        app:layout_constraintVertical_bias="0.085" />
+    <EditText
+        android:id="@+id/emailreg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_txt_background"
+        android:hint="Email id"
+        android:padding="10dp"
+        android:textSize="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:drawableLeft="@mipmap/email"
+        android:drawablePadding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/namereg"
+        app:layout_constraintVertical_bias="0.085" />
+    <EditText
+        android:id="@+id/passwordreg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_txt_background"
+        android:hint="Password"
+        android:padding="10dp"
+        android:textSize="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:drawableLeft="@mipmap/p1"
+        android:drawablePadding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailreg"
+        app:layout_constraintVertical_bias="0.085" />
+    <Button
+        android:id="@+id/createacc"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:textSize="25dp"
+        android:onClick="createacc"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordreg"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

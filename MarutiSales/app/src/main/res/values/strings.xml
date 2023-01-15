@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MarutiSales</string>
+    <string name="first_slide">Choose your Product</string>
+    <string name="second_slide">Fast delivery</string>
+    <string name="third_slide">Good services</string>
+    <string name="description">happy to anounce</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

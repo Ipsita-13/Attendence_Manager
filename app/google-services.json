@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "533564499727",
+    "project_id": "attendence-manager-94f6d",
+    "storage_bucket": "attendence-manager-94f6d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533564499727:android:a0461e2879dfe78aea407a",
+        "android_client_info": {
+          "package_name": "com.example.attendence_manager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533564499727-fdivvhmpem83lq1nno6f953thugt1732.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbxTryzGJR0okpfynH2aNF2WOPl6SpaI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533564499727-fdivvhmpem83lq1nno6f953thugt1732.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1017235535757",
+    "firebase_url": "https://marutisales2-13b5c-default-rtdb.firebaseio.com",
+    "project_id": "marutisales2-13b5c",
+    "storage_bucket": "marutisales2-13b5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017235535757:android:6b318e1f51991ce8caefc4",
+        "android_client_info": {
+          "package_name": "com.agriculture.marutisales"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017235535757-7g4relvqlodc093e2grfc4ddl8aidu22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8i4cCi7fboGo4FekDJZkR4zac2kmAg3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017235535757-7g4relvqlodc093e2grfc4ddl8aidu22.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
