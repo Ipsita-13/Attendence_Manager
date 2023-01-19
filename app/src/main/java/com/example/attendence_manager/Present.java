@@ -15,7 +15,7 @@ TextView status;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.student_layout);
 
-        status=findViewById(R.id.status);
+//        status=findViewById(R.id.status);
 
 
     }

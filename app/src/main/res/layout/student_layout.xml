@@ -14,16 +14,16 @@
         android:textSize="25dp"
         android:layout_marginLeft="20dp"/>
 
-    <TextView
-        android:id="@+id/status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Absent"
-        android:textSize="25dp"
-        android:layout_marginLeft="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/student_name" />
+<!--    <TextView-->
+<!--        android:id="@+id/status"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="Absent"-->
+<!--        android:textSize="25dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/student_name" />-->
 
     <TextView
         android:id="@+id/gender"
@@ -34,7 +34,7 @@
         android:textSize="25dp"
         android:layout_marginLeft="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/status" />
+        app:layout_constraintTop_toBottomOf="@id/roll_no" />
     <TextView
         android:id="@+id/roll_no"
         android:layout_width="wrap_content"
@@ -42,8 +42,8 @@
         android:layout_marginTop="16dp"
         android:text="Roll"
         android:textSize="25dp"
-        android:layout_marginLeft="60dp"
-        app:layout_constraintStart_toEndOf="@+id/status"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/student_name" />
 
 

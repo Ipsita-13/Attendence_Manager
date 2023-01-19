@@ -155,7 +155,7 @@ dr.child(prev_date).child(sec).child("s"+(position+1)).child("student_detail")
         public viewHolder(@NonNull View itemView) {
             super(itemView);
             name=itemView.findViewById(R.id.student_name);
-            status=itemView.findViewById(R.id.status);
+//            status=itemView.findViewById(R.id.status);
             roll=itemView.findViewById(R.id.roll_no);
             gender=itemView.findViewById(R.id.gender);
            // present=itemView.findViewById(R.id.present_btn);
