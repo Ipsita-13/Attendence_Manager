@@ -192,6 +192,7 @@ stu_details.setOnClickListener(new View.OnClickListener() {
 
 
 //-----------------getting data from firebase----------------------------------------------------------------
+   int c=0;
     public void GetDataFromFirebase(String section) {
 
 
@@ -202,23 +203,28 @@ stu_details.setOnClickListener(new View.OnClickListener() {
 
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-
+String rec="";
                     ClearAll();
 
                     for (DataSnapshot snap : snapshot.getChildren()) {
                         student_model sm = new student_model();
-
+                         c++;
 
                         String child = snap.getKey();
-                       Log.d("child_of_a", child);
-                       if(!child.equals("section_total")) {
+
+                       Log.d("rec contains",String.valueOf(rec.contains(child)));
+                       if(!child.equals("section_total") ) {
                            sm.setName(snap.child("student_detail").child("name").getValue().toString());
                            sm.setGender(snap.child("student_detail").child("gender").getValue().toString());
                            sm.setRoll_no(snap.child("student_detail").child("roll").getValue().toString());
                            sm.setStatus(snap.child("student_detail").child("status").getValue().toString());
 
                            //  Log.d("values", Integer.toString(i));
+
                            list.add(sm);
+                           rec=rec+child;
+                           Log.d("child_of_a", child);
+
                        }
 
                     }
@@ -259,13 +265,16 @@ stu_details.setOnClickListener(new View.OnClickListener() {
                     map.put("gender", gender[i]);
                     map.put("status", "absent");
                     map.put("roll", Integer.toString(i + 1));
+                 Log.d("student_add",stu[i]);
+if(snapshot.child("s"+(i+1)).child("student_detail")
+        .hasChild("attendence")) {
+     a = Integer.parseInt(snapshot.child("s" + (i + 1)).child("student_detail")
+            .child("attendence").getValue().toString());
+}
+    map.put("attendence", String.valueOf(a));
+    Log.d("attendence_value", String.valueOf(a));
+    dr.child(date).child(section).child("s" + (i + 1)).child("student_detail").updateChildren(map);
 
-                    //getting the previous data values
-                    int a=Integer.parseInt(snapshot.child("s"+(i+1)).child("student_detail")
-                            .child("attendence").getValue().toString());
-                    map.put("attendence",String.valueOf(a));
-                    Log.d("attendence_value",String.valueOf(a));
-                    dr.child(date).child(section).child("s"+(i+1)).child("student_detail").updateChildren(map);
 
 
                 }
