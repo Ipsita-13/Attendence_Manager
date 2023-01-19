@@ -4,6 +4,7 @@ import static android.os.ParcelFileDescriptor.MODE_APPEND;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -61,7 +62,7 @@ public class Student_Adapter extends RecyclerView.Adapter<Student_Adapter.viewHo
         holder.name.setText("Name = "+student.getName());
         holder.gender.setText("Gender = "+student.getGender());
         holder.roll.setText("Roll No = "+student.getRoll_no());
-        holder.status.setText("Status = "+student.getStatus());
+//        holder.status.setText("Status = "+student.getStatus());
         dr=FirebaseDatabase.getInstance().getReference();
        //--------setting the attendence value------------------------------------------------------
         //-----------------------------------------------------------------------------------------
@@ -106,7 +107,7 @@ public class Student_Adapter extends RecyclerView.Adapter<Student_Adapter.viewHo
                 editor.putString("att", String.valueOf(i));
                 editor.apply();
              Log.d("i value",String.valueOf(i));
-
+holder.itemView.setBackgroundColor(Color.LTGRAY);
 
 dr.child(prev_date).child(sec).child("s"+(position+1)).child("student_detail")
         .child("attendence").addValueEventListener(new ValueEventListener() {

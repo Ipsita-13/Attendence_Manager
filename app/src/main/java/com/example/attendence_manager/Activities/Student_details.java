@@ -167,50 +167,40 @@ info.child(date).child(sec).child("section_total").setValue(section_total.getTex
 
      //   Query q=dr.getRoot().child(sec);
         int i=1;
-        DatabaseReference info = FirebaseDatabase.getInstance().getReference();
-        info.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot:snapshot.getChildren())
-                {
+     dr.child(date).child(sec).addValueEventListener(new ValueEventListener() {
+         @Override
+         public void onDataChange(@NonNull DataSnapshot snapshot) {
+             String child= snapshot.getKey();
+             Log.d("children_of_a",child);
+             for(int i=1;i<5;i++)
+             {
+                 //1. get the name
+                 String name_a=snapshot.child("s"+i).child("student_detail").child("name").getValue().toString();
+                 if(name.equals(name_a))
+                 {
+                     //get the attendence
+                     int a=Integer.parseInt(snapshot.child("s"+i).child("student_detail").child("attendence").
+                             getValue().toString());
+                     Log.d("attendence_of_student",String.valueOf(a));
+                     att_percent.setText(String.valueOf(a)+"/365");
+                     break;
+                 }
 
-                   String child=dataSnapshot.getKey();
-                    Log.d("child_get_details",child);
-                   Log.d("section",sec);
-if(!child.equals("Teachers") && !child.equals("section_total"))
-{
-    //
-    for(int i=1;i<5;i++)
-    {
-        String present = dataSnapshot.child(sec).child("s" + i)
-                .child("student_detail").child("name").getValue().toString();
-        if(name.equals(present))
-        {
-            //calculation of percentage
-            int pres_val=Integer.parseInt(dataSnapshot.child(sec).child("s"+i)
-                    .child("student_detail").child("attendence").getValue().toString());
-            long precent=pres_val*100/365;
-            att_percent.setText(String.valueOf(precent)+"%");
+             }
+         }
 
-            female.setText(dataSnapshot.child(sec).child("s"+i)
-                    .child("student_detail").child("attendence").getValue().toString());
-            Log.d("present", present);
-            break;
-        }
+         @Override
+         public void onCancelled(@NonNull DatabaseError error) {
+
+         }
+     });
+
+
 
     }
-}
 
 
-                }
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-    }
 
 
 }

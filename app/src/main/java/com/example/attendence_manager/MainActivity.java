@@ -196,7 +196,7 @@ stu_details.setOnClickListener(new View.OnClickListener() {
     public void GetDataFromFirebase(String section) {
 
 
-        Query query = dr.child(dateTimeDisplay.getText().toString()).child(section);
+        Query query = dr.child(section);
         Log.d("query",query.toString());
             query.addValueEventListener(new ValueEventListener() {
                 @Override
@@ -217,7 +217,7 @@ String rec="";
                            sm.setName(snap.child("student_detail").child("name").getValue().toString());
                            sm.setGender(snap.child("student_detail").child("gender").getValue().toString());
                            sm.setRoll_no(snap.child("student_detail").child("roll").getValue().toString());
-                           sm.setStatus(snap.child("student_detail").child("status").getValue().toString());
+//                           sm.setStatus(snap.child("student_detail").child("status").getValue().toString());
 
                            //  Log.d("values", Integer.toString(i));
 
